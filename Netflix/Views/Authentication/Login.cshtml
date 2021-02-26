@@ -1,0 +1,32 @@
+﻿@model Netflix.Web.ViewModels.LoginViewModel;
+
+<div>
+    <form asp-action="Login" asp-controller="Authentication" method="post">
+
+        <div class="mb-3 row">
+            <label for="Email" class="col-sm-2 col-form-label">Email</label>
+            <div class="col-sm-10">
+                <input type="email" maxlength="50" min="2" class="form-control" id="Email" name="Email" value="@Model?.Email">
+            </div>
+        </div>
+        <div class="mb-3 row">
+            <label for="password" class="col-sm-2 col-form-label">Password</label>
+            <div class="col-sm-10">
+                <input type="password" class="form-control" id="password" name="Password" value="@Model?.Password">
+            </div>
+        </div>
+        @if (ViewBag.IsInvalidCreds != null && ViewBag.IsInvalidCreds)
+        {
+            <div class="mb-3 row text-danger">
+                <label class="col-sm-2 col-form-label">Email and password is invalid</label>
+            </div>
+        }
+
+        <div class="mb-3 row">
+            <button class="btn btn-success" type="submit">Login</button>
+
+        </div>
+
+
+    </form>
+</div>

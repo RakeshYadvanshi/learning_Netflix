@@ -1,0 +1,49 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 16
+VisualStudioVersion = 16.0.30717.126
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Netflix.Web", "Netflix\Netflix.Web.csproj", "{DFBFF91D-872D-4A30-AB36-B4F4552581D7}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Netflix.Db", "Netflix.Db\Netflix.Db.csproj", "{39E1F480-9057-4335-BE76-316976CB2776}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Netflix.Models", "Netflix.Models\Netflix.Models.csproj", "{75655B90-7154-4CD9-94B6-843B00594858}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Netflix.Services", "Netflix.Services\Netflix.Services.csproj", "{0CFB5FE1-C460-4486-B46B-AE7422E52A3B}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Netflix.Api", "Netflix.Api\Netflix.Api.csproj", "{864ECD0E-3D06-42EB-A2E7-595140E6B31B}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{DFBFF91D-872D-4A30-AB36-B4F4552581D7}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{DFBFF91D-872D-4A30-AB36-B4F4552581D7}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{DFBFF91D-872D-4A30-AB36-B4F4552581D7}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{DFBFF91D-872D-4A30-AB36-B4F4552581D7}.Release|Any CPU.Build.0 = Release|Any CPU
+		{39E1F480-9057-4335-BE76-316976CB2776}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{39E1F480-9057-4335-BE76-316976CB2776}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{39E1F480-9057-4335-BE76-316976CB2776}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{39E1F480-9057-4335-BE76-316976CB2776}.Release|Any CPU.Build.0 = Release|Any CPU
+		{75655B90-7154-4CD9-94B6-843B00594858}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{75655B90-7154-4CD9-94B6-843B00594858}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{75655B90-7154-4CD9-94B6-843B00594858}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{75655B90-7154-4CD9-94B6-843B00594858}.Release|Any CPU.Build.0 = Release|Any CPU
+		{0CFB5FE1-C460-4486-B46B-AE7422E52A3B}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{0CFB5FE1-C460-4486-B46B-AE7422E52A3B}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{0CFB5FE1-C460-4486-B46B-AE7422E52A3B}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{0CFB5FE1-C460-4486-B46B-AE7422E52A3B}.Release|Any CPU.Build.0 = Release|Any CPU
+		{864ECD0E-3D06-42EB-A2E7-595140E6B31B}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{864ECD0E-3D06-42EB-A2E7-595140E6B31B}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{864ECD0E-3D06-42EB-A2E7-595140E6B31B}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{864ECD0E-3D06-42EB-A2E7-595140E6B31B}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {35124ACE-378C-4B52-872A-89B1C035C294}
+	EndGlobalSection
+EndGlobal
