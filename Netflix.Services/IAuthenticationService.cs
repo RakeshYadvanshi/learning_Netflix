@@ -1,11 +1,9 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Text;
+﻿using Netflix.Models;
 
 namespace Netflix.Services
 {
     public interface IAuthenticationService
     {
-        bool ValidateEmailAndPasword(string email, string password);
+        User ValidateEmailAndPasword(string email, string password);
     }
 }

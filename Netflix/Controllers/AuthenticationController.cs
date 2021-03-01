@@ -5,6 +5,8 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
 using Netflix.Services;
+using Microsoft.AspNetCore.Http;
+
 namespace Netflix.Web.Controllers
 {
     public class AuthenticationController : Controller
@@ -26,11 +28,12 @@ namespace Netflix.Web.Controllers
         [HttpPost]
         public IActionResult Login(LoginViewModel loginViewModel)
         {
-            var isLogined = authenticationService.ValidateEmailAndPasword(loginViewModel.Email, loginViewModel.Password);
+            var userDetail = authenticationService.ValidateEmailAndPasword(loginViewModel.Email, loginViewModel.Password);
 
-            if (isLogined == true)
+            if (userDetail != null)
             {
-                TempData["Email"] = loginViewModel.Email;
+                HttpContext.Session.SetString("UserEmail", userDetail.Email);
+                HttpContext.Session.SetString("UserId", userDetail.Id.ToString());
                 return RedirectToAction("MyAccount", "Account");
             }
 
