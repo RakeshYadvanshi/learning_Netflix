@@ -5,6 +5,8 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
 using Netflix.Services;
+using Microsoft.AspNetCore.Http;
+
 namespace Netflix.Web.Controllers
 {
     public class AuthenticationController : Controller
@@ -30,7 +32,7 @@ namespace Netflix.Web.Controllers
 
             if (isLogined == true)
             {
-                TempData["Email"] = loginViewModel.Email;
+                HttpContext.Session.SetString("UserEmail", loginViewModel.Email);
                 return RedirectToAction("MyAccount", "Account");
             }
 
