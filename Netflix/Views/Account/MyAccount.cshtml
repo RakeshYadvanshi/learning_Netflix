@@ -1,3 +1,64 @@
-﻿Hello @ViewBag.userEmail
+﻿@inject Netflix.Services.IAuthenticationService authentication
+how to print @@ char
+Hello @@ @ViewBag.userEmail
 
+// we can not space typically with the expception of await and inject
 You Id is @ViewBag.userId
+Hi @ViewBag.userEmail
+
+
+@await authentication.ValidateEmailAndPasword("sdf", "sdfs")
+
+@{
+    var users = ViewBag.listOfUsers;
+    var userCount = users == null ? 0 : users.Count;
+    var user1= users.FirstOrDefault();
+}
+
+@{ 
+
+
+
+}
+
+@if (users != null)
+{
+
+    if (users.Count > 0)
+    {
+        <table>
+            <tr>
+                <td>Sn</td>
+                <td>Email</td>
+                <td>password</td>
+            </tr>
+            @foreach (var user in users)
+            {
+                <tr>
+                    <td>Sn</td>
+                    <td>@user.Email</td>
+                    <td>@user.password</td>
+                </tr>
+            }
+        </table>
+    }
+    else
+    {
+        <div>
+            there is no content
+        </div>
+    }
+
+}
+else
+{
+
+    <div>
+        there is no content
+    </div>
+}
+
+
+
+
+

@@ -4,15 +4,15 @@
     <form asp-action="Login" asp-controller="Authentication" method="post">
 
         <div class="mb-3 row">
-            <label for="Email" class="col-sm-2 col-form-label">Email</label>
+            @Html.LabelFor(m => Model.UserName, new { @class = "col-sm-2 col-form-label" })
             <div class="col-sm-10">
-                <input type="email" maxlength="50" min="2" class="form-control" id="Email" name="Email" value="@Model?.Email">
+                @Html.TextBox("UserName", @Model?.UserName, new { @class = "form-control", @maxlength = "50", @min = "2" })
             </div>
         </div>
         <div class="mb-3 row">
-            <label for="password" class="col-sm-2 col-form-label">Password</label>
+            @Html.LabelFor(m => Model.Password, new { @class = "col-sm-2 col-form-label" })
             <div class="col-sm-10">
-                <input type="password" class="form-control" id="password" name="Password" value="@Model?.Password">
+                @Html.Password("password", @Model?.Password, new { @class = "form-control" })
             </div>
         </div>
         @if (ViewBag.IsInvalidCreds != null && ViewBag.IsInvalidCreds)
@@ -21,6 +21,13 @@
                 <label class="col-sm-2 col-form-label">Email and password is invalid</label>
             </div>
         }
+
+
+        <div class="mb-3 row text-danger">
+            @Html.CheckBox("AgreeTerms", @Model?.AgreeTerms) I agree to terms
+        </div>
+
+
 
         <div class="mb-3 row">
             <button class="btn btn-success" type="submit">Login</button>

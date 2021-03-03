@@ -1,9 +1,10 @@
 ﻿using Netflix.Models;
+using System.Threading.Tasks;
 
 namespace Netflix.Services
 {
     public interface IAuthenticationService
     {
-        User ValidateEmailAndPasword(string email, string password);
+        Task<User> ValidateEmailAndPasword(string email, string password);
     }
 }

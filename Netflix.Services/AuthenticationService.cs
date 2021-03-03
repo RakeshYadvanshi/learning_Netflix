@@ -1,4 +1,6 @@
 ﻿using Netflix.Models;
+using System.Threading;
+using System.Threading.Tasks;
 
 namespace Netflix.Services
 {
@@ -9,9 +11,11 @@ namespace Netflix.Services
         {
 
         }
-        public User ValidateEmailAndPasword(string email, string password)
+        public async Task<User> ValidateEmailAndPasword(string email, string password)
         {
-            var _email = "rk@gmail.com";
+            
+            
+            var _email = "rky";
             var _password = "12345";
             if (_email == email && password == _password)
             {

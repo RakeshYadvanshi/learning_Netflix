@@ -2,9 +2,11 @@
 using Microsoft.Extensions.Logging;
 using Netflix.Models;
 using System;
+using System.Collections;
 using System.Collections.Generic;
 using System.Diagnostics;
 using System.Linq;
+using System.Text;
 using System.Threading.Tasks;
 
 namespace Netflix.Controllers
@@ -20,9 +22,22 @@ namespace Netflix.Controllers
 
         public IActionResult Index()
         {
+         
+
             return View();
         }
+        class Person
+        {
 
+        }
+        struct MyStruct
+        {
+
+        }
+        enum MyEnum
+        {
+
+        }
         public IActionResult Privacy()
         {
             return View();

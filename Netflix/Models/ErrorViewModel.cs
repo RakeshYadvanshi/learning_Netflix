@@ -7,5 +7,9 @@ namespace Netflix.Models
         public string RequestId { get; set; }
 
         public bool ShowRequestId => !string.IsNullOrEmpty(RequestId);
+        public override string ToString()
+        {
+            return RequestId +" "+ ShowRequestId;
+        }
     }
 }

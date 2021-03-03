@@ -26,9 +26,9 @@ namespace Netflix.Web.Controllers
 
 
         [HttpPost]
-        public IActionResult Login(LoginViewModel loginViewModel)
+        public async Task<IActionResult> Login(LoginViewModel loginViewModel)
         {
-            var userDetail = authenticationService.ValidateEmailAndPasword(loginViewModel.Email, loginViewModel.Password);
+            var userDetail = await authenticationService.ValidateEmailAndPasword(loginViewModel.UserName, loginViewModel.Password);
 
             if (userDetail != null)
             {
